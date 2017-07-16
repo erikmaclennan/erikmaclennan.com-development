@@ -1,0 +1,48 @@
+fun_facts:
+  - title: 'Location'
+    content:
+      - 'Vancouver, BC'
+  - title: 'Likes'
+    content:
+      - 'physics'
+      - 'running'
+      - 'coffee'
+      - 'minimaluminiumalism'
+      - 'good memes'
+      - 'electric cars'
+      - 'knolling'
+      - 'Karl Pilkington'
+  - title: 'Dislikes'
+    content:
+      - 'bad wifi'
+      - 'faffing'
+about:
+  - title: 'Hi there!'
+    content:
+      - "I'm Erik MacLennan, a third-year Engineering Physics student at the University of British Columbia in Vancouver, Canada."
+
+capabilities:
+  - title: "Computer"
+    services:
+      - 'C, C++, Java, Swift (Xcode)'
+      - 'SOLIDWORKS 2016'
+      - 'MATLAB'
+      - 'Photoshop CS6'
+      - 'CSS, HTML, Bootstrap'
+      - 'iWork/MS Office'
+
+  - title: "Electrical"
+    services:
+      - 'Arduino (Uno, Mega)'
+      - 'Non-linear Circuit Analysis'
+      - 'Power Circuitry (H-Bridge)'
+      - 'RLC, MOSFET,  Op-amps'
+      - 'Circuit design (breadboarding, soldering)'
+
+  - title: "Mechanical"
+    services:
+      - 'Mechanical Design'
+      - 'Mechanics of Materials'
+      - 'Electromechanics'
+      - 'CAD Analysis'
+      - 'Prototyping (3D Printing, laser cutting, waterjet)'

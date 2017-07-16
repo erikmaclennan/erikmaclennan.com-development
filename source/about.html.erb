@@ -1,0 +1,140 @@
+---
+title: About
+---
+
+<section id="main">
+<div class="row">
+  <div class="col-xs-12">
+<!--    <h1 class="u-font-mega u-font-center c-page-title"><em>hi.</em></h1>-->
+
+    <figure>
+      <picture>
+        <source media="(min-width: 1020px)" srcset="/images/2016/11/portrait/portrait-large.png">
+        <source media="(min-width: 900px)" srcset="/images/2016/11/portrait/portrait-large.png">
+        <source media="(min-width: 680px)" srcset="/images/2016/11/portrait/portrait-large.png">
+        <source srcset="/images/2016/11/portrait/portrait-large.png">
+        <img alt="Photos by Morten Kals" srcset="">
+      </picture>
+
+      <figcaption>Photos courtesy of <a href="https://mkals.github.io">Morten Kals</a>.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="threesidebyside">
+  <% data.about.fun_facts.each do |fact| %>
+
+    <firsting>
+
+     <h3> <%= fact.title %> </h3>
+
+      <p>
+        <%= fact.content.join(", ") %>
+      </p>
+
+    </firsting>
+
+  <% end %>
+</section>
+
+
+<section id="smallcenteredimage">
+    <space>
+        <p> </p>
+    </space>
+    <imager>
+<% data.about.about.each do |section| %>
+
+
+      <h2><%= section.title %></h2>
+      <% section.content.each do |p| %>
+        <p><%= p %></p>
+      <% end %>
+
+<% end %>
+    </imager>
+    <space>
+        <p> </p>
+    </space>
+</section>
+
+<section id = "main">
+    <hr>
+    <center>
+    <h3>Technical Skills</h3>
+    </center>
+    <hr>
+</section>
+
+<section id="threesidebyside">
+  <% data.about.capabilities.each do |capability| %>
+    <firsting>
+        <center>
+      <h3 class="u-no-margin"><%= capability.title %></h3>
+
+      <ul class="u-font-unlist">
+        <% capability.services.each do |service| %>
+          <li><%= service %></li>
+        <% end %>
+
+      </ul>
+            </center>
+    </firsting>
+  <% end %>
+</section>
+
+
+<section id = "main">
+    <hr>
+    <center>
+    <h3>Work Experience</h3>
+    </center>
+    <hr>
+</section>
+
+<section id="smallcenteredimage">
+  <space>
+        <p> </p>
+    </space>
+    <imager>
+    <h2>Recoil Mass Spectrometer Researcher, TRIUMF, 2016</h2>
+    <p>- Assisted in the preparation, assembly, and alignment of sensitive electrostatic and vacuum components for the <a href="http://davids.triumf.ca/emma.htm">EMMA Recoil Mass Spectrometer</a>.</p>
+      <p>- Prepared titanium and aluminum components for a high voltage environment through ultrasonic cleaning and polishing techniques to achieve a sub-micron surface finish.</p>
+      <p>- Performed a series of magnetic field measurements on one of the quadrupole electromagnets via Hall effect magnetometers.</p>
+    <h2>Graphic Design, Freelance 2013–</h2>
+    <p>- Self-taught Photoshop proficiency with graphic designs sold on over 1300 items (stickers, clothing, posters, etc.)</p>
+    <h2>Notetaker, UBC Access and Diversity, 2014-</h2>
+    <p>- Shared high quality notes for each lecture of three courses taught at UBC, communicating with clients to tailor to their preferences.</p>
+    </imager>
+    <space>
+        <p> </p>
+    </space>
+</section>
+
+
+<section id = "main">
+    <hr>
+    <center>
+    <h3>Technical Experience</h3>
+    </center>
+    <hr>
+</section>
+
+<section id="smallcenteredimage">
+  <space>
+        <p> </p>
+    </space>
+    <imager>
+    <h2>Custom FDM 3D Printer Build, WIKUS</h2>
+    <p>- Designed based on CoreXY motion, including 15,000 cubic centimeter build volume and dual extrusion system. Noise reduction and print quality at speed are emphasized.</p>
+    <p>-Multiple components modelled in SOLIDWORKS and manufactured via laser cutting, waterjet cutting, and 3D printing.</p>
+      <h2> 'Uber-bot' Robot Competition, ENPH 253 - Intro to Prototyping </h2>
+      <p>- In teams of four, designed and built a fully autonomous robot capable of picking up and dropping off dolls in specified locations.</p>
+      <p>- Heavily involved in both mechanical design in SOLIDWORKS, and in the software written in C++ within Xcode.</p>
+      <h2>3D Scanner Build, UBC Rapid</h2>
+      <p>- Using two HD webcams and a line laser, a sub team of UBC Rapid (5 members) designed and built a 3D scanning device. Was heavily involved in mechanical design.</p>
+  </imager>
+    <space>
+        <p> </p>
+    </space>
+</section>

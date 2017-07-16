@@ -1,0 +1,146 @@
+---
+title: WIKUS
+scope: "3D printing, CAD, Fabrication"
+intro: "As a derivative of the C-bot, this is a 3D printer that I have been working on for the past 2 years. The design is based on a CoreXY method of motion, which is fairly uncommon for desktop 3D printers. The name is derived from Neill Blomkamp's film, District 9."
+filters: item-branding item-packaging
+priority: 1
+---
+<div class="row center-xs">
+  <div class="col-xs-12">
+    <%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/full.png" }) %>
+  </div>
+</div>
+
+
+
+<h2>The Rationale</h2>
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-md-6">
+    <p>I quickly learned, after assembling my first 3D printer kit, that the actual process of building  printers is where I find the greatest utility. So in 2014 I set out to make one of the most capable, unique FDM desktop 3D printers. Now, after 2 years of development on and off, WIKUS was born. The design has taken great inspiration from <a href="http://openbuilds.org/builds/c-bot.1146/">Carl Feniak's C-Bot build</a>, but with many modifications to satisfy the following design tenets: </p>
+
+      <section id ="smallcenteredimage">
+        <space><p>  </p></space>
+        <imager>
+
+      <p>- <strong>Clean</strong>. A professional look with little exposed wiring.</p>
+
+      <p>- <strong>Quiet</strong>. No unnecessary noise created from linear motion and cooling.</p>
+
+      <p>- <strong>Fast</strong>. Minimize gantry mass for quick movements.</p>
+
+      <p>- <strong>Capable</strong>. Massive build volume, dual extrusion. Easy to upgrade.</p>
+
+            </imager>
+        <space><p>  </p></space>
+    </section>
+  </div>
+</div>
+<p>
+
+
+</p>
+<section id="halfimage">
+    <%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/gantry.png" }) %>
+</section>
+<section id="halfimage">
+<%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/benchy.png" }) %>
+</section>
+
+<section id="smallcenteredimage">
+<space><p> </p>
+</space>
+    <imager>
+    <%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/solidgantry.png" }) %>
+    </imager>
+    <space><p> </p>
+    </space>
+</section>
+
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+    <h2>Linear Motion</h2>
+    <p>The method of motion on this printer is definitely one of its strong suits. The V-slot extrusions, paired with delrin V-wheels, proves to be, for all intents and purposes, silent.  </p>
+    <p>As for speed and accuracy, the light gantry (custom cut  1/8'' aluminium on university water jet) makes travel speeds in excess of 100 mm/s not uncommon. Prints with 100 micron layer height have been achieved with great success (vase in top picture). </p>
+      <p>A <a href="http://corexy.com/index.html">CoreXY</a> technique has been employed. I find it very nice just in the fact that there is no translational movement of any stepper motor. My rationale with choosing it was, with a bowden extruder setup, to greatly minimize the inertia of the system. </p>
+  </div>
+</div>
+
+<section id="smallcenteredimage">
+<space><p> </p>
+    </space>
+    <imager>
+    <%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/linearmotion.jpeg" }) %>
+    </imager>
+    <space><p> </p>
+    </space>
+</section>
+
+
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+    <h2>Part Sourcing</h2>
+      I was able to canabalize the stepper motors and other basic electronics from my previous printer, and I felt it beneficial to source the remaining parts from only a few big vendors to reduce shipping costs. I sourced the V-slot extrusions and components from Openbuilds, and the remaining extrusions from Misumi. Newark was the main source of fasteners. I've compiled a complete <a href="https://docs.google.com/spreadsheets/d/1VFXBmG-NdAx8jQsNQoBOI_Xdwfc1Z4sC0Lzz__8FpN4/edit?usp=sharing">bill of materials</a> for this build, complete with suppliers and prices.
+  </div>
+</div>
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+    <h2>Auto Bed Leveling</h2>
+      <p>The first iterations of WIKUS involved a simple set of leveling screws to level the entire bed. However, when the bed is 20cm x 40cm and not perfectly flat, this is an impossible task. To open up use of the entire bed for larger prints, auto leveling was a necessity. Instead of the generic inductive sensors, I went for a small servo controlled sensor called the <a href=" https://www.indiegogo.com/projects/bltouch-auto-bed-leveling-sensor-for-3d-printers#/">BLTouch</a>. I use it to probe 16 points  (10 micron accuracy) on the bed and performing a least squares interpolation to live adjust the height during printing.</p>
+
+
+  </div>
+</div>
+
+<section id="smallcenteredimage">
+<space><p> </p>
+    </space>
+    <imager>
+    <%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/bltouch.jpg" }) %>
+    </imager>
+    <space><p> </p>
+    </space>
+</section>
+
+<!--
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+    <h2>Software</h2>
+      Marlin, Octoprint
+  </div>
+</div>
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+    <h2>Manufacture</h2>
+      Marlin, Octoprint
+  </div>
+</div>
+-->
+
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+    <h2>What's Next?</h2>
+    <p>The journey of WIKUS continues, as it is easily modified as discussed above. The current aim is to use the printer as a platform for experimental development of automation technologies that I feel are lacking in the consumer printing field. With Octoprint and auto-bed leveling now installed, a means to remove parts from the build platform autonomously is one of the final steps in truly operating the printer remotely from anywhere. Furthermore, a way to switch filaments remotely, similarly to <a href="http://www.prusaprinters.org/original-prusa-i3-mk2-multi-material-upgrade-release/#_ga=1.189792875.1106800334.1474300626">Josef Prusa's Multimaterial Upgrade</a> , are currently in the works.</p>
+  </div>
+</div>
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-6">
+      <h2>Stay tuned.</h2>
+      <center>
+    <h3>and if you need something printed,</h3>
+      </center>
+    <center><a href="https://www.3dhubs.com/service/noober" data-3dhubs-widget="button" data-hub-id="53739" data-type="hubLink" data-color="red" data-size="large" data-text="Visit My Hub!" >Visit My Hub!</a> <script>!function(a,b,c,d){var e,g=(a.getElementsByTagName(b)[0],/^http:/.test(a.location)?"http":"https");a.getElementById(d)||(e=a.createElement(b),e.id=d,e.src=g+"://d3d4ig4df637nj.cloudfront.net/w/2.0.js",e.async=!0,a.body.appendChild(e))}(document,"script",1,"h3d-widgets-js");</script></center>
+  </div>
+</div>
+
+<div class="row center-xs">
+  <div class="col-xs-12 col-sm-10">
+    <%= partial("partials/lazyimg", :locals => { :img => "/images/2016/10/wikus/nooberteampic.jpg" }) %>
+  </div>
+</div>

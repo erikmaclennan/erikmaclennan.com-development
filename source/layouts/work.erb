@@ -1,0 +1,29 @@
+<% wrap_layout :layout do %>
+
+<section id="main">
+
+    <section id = "worktitle">
+      <h1><%= current_page.title %></h1>
+    </section>
+
+
+  <section id= "intro">
+      <introbox>
+          <center>
+          <h3>INTRO</h3>
+          </center>
+      </introbox>
+      <introinfo>
+          <p><%= current_page.data.intro %></p>
+      </introinfo>
+    </section>
+  <article>
+    <%= yield %>
+  </article>
+    <section>
+<%= partial "partials/latest-work" %>
+</section>
+<% end %>
+</section>
+
+

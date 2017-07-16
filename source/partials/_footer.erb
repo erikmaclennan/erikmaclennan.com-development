@@ -1,0 +1,30 @@
+<footer>
+    <section id = "main">
+    <hr>
+    </section>
+    <section id= "footerlinks">
+        <spacey>
+            <p> </p>
+        </spacey>
+        <poopy>
+            <ul>
+                <% for link in data.navigation.links %>
+            <linky>
+                <center>
+                <li><%= active_link_to link.title, link.url %></li>
+                </center>
+            </linky>
+                <% end %>
+            </ul>
+        </poopy>
+        <spacey>
+            <p> </p>
+        </spacey>
+        <center>
+        </center>
+    </section>
+    <center>
+    2017| Made by Erik Maclennan
+    </center>
+    </section>
+</footer>
